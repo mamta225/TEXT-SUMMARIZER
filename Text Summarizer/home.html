@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarization | Summarizer</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="Myicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Myicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Myicon/favicon-16x16.png">
+    <link rel="manifest" href="Myicon/site.webmanifest">
+    <link rel="stylesheet" href="stylemee.css" href="{{url_for('static', filename='css/styles.css')}}">
+    <style>
+        .conatiner{
+            background-image:url("Summarize-image.png");
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <center>
+        
+        <h1>Text Summarization</h1>
+        </center>
+        </div>
+    </header>
+    <center>
+        <div class="container">
+            <form action="{{url_for('summarize')}}" method="POST">
+                <h3><b>Let's Summarize</b</h3>
+                <br>
+                <label for="myfile"><b>Please select a file:</b></label>
+                <input type="file" id="myfile" name="myfile"><br>
+                <p><b><h2>OR</h2></b></p>
+                <p><b><h2>Enter your text here:</h2></b></p>
+                <textarea name="text" rows="12" cols="120"></textarea><br><br>
+                <input type="submit" class="btn-cls" value="Summarize">
+                <button type="reset" class="btn-cls">Clear</button>
+            </form>
+        </div>
+    </center>
+    
+</body>
+</html>
